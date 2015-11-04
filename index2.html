@@ -1,0 +1,193 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<title>
+Portfolio - Homepage
+</title>
+<body>
+
+<div id="container">
+
+<div id="header">
+<a href="http://www.social-systems.co.uk">Parent Directory</a>
+
+
+<div class="HorizLinks">
+<ul>
+<li><a href="index2.html">Homepage</a></li>
+<li><a href="Computer Programming.html">C-Programming</a></li>
+<li><a href="Computer Software.html">C-Software</a></li>
+<li><a href="Computer Networks.html">C-Networks</a></li>
+<li><a href="Computer Hardware.html">C-Hardware</a></li>
+<li><a href="Contact Us.html">Contact Us</a>
+<li><a href="Downloads.html">Downloads</a>
+</ul>
+</div>
+
+<p>Homepage</p>
+<FORM METHOD="LINK" ACTION="index.html">
+<INPUT TYPE="submit" VALUE="LOGOUT">
+</FORM>
+<p class="smalltext">All rights reserved.</p>
+
+</div>
+
+
+
+<div id="horizontalnav">
+
+<div class="navlinks">
+
+<ul>
+Useful Sites:
+<li><a href="http://www.2createawebsite.com">2 Create</a></li>
+<li><a href="http://www.social-systems.co.uk/cpanel">CPANEL</a></li>
+<li><a href="Binary.html">Recent</a></li>
+<li><a href="Content.html">Content</a></li>
+
+</div>
+
+</div>
+
+
+
+
+<div id="leftnav">
+<br>
+<br>
+<script type="text/javascript" src="calendar.js"></script>
+<br>
+<br>
+</div>
+
+<div id="rightnav">
+<img src="images\headerBG.png" width=140px height=150px />
+<br>
+Sam Herring
+<br>
+9Z1
+<br>
+My Portfolio
+<br>
+<br>
+<img src="images\QR.png" width=140px height=150px />
+</div>
+
+
+<div id="body">
+
+
+	
+<div class="box">
+<h2>Welcome to...</h2>
+Sam Herring's Online GCSE Portfolio.
+<br>
+<form name="news">
+<textarea name="news2" cols=70 rows=2 wrap=virtual></textarea>
+</form>
+
+<script language=JavaScript>
+
+var newsText = new Array();
+newsText[0] = "Welcome to...";
+newsText[1] = "Sam Herring's Online GCSE Portfolio";
+newsText[2] = "(C) Copyright Social Systems LTD 2012";
+newsText[3] = "Login Avaliable from Sam Herring";
+newsText[4] = "Demo Login: User: Demo Pass: demokey123";
+
+var ttloop = 1;    // Repeat forever? (1 = True; 0 = False)
+var tspeed = 60;   // Typing speed in milliseconds (larger number = slower)
+var tdelay = 1500; // Time delay between newsTexts in milliseconds
+
+// ------------- NO EDITING AFTER THIS LINE ------------- \\
+var dwAText, cnews=0, eline=0, cchar=0, mxText;
+
+function doNews() {
+  mxText = newsText.length - 1;
+  dwAText = newsText[cnews];
+  setTimeout("addChar()",1000)
+}
+function addNews() {
+  cnews += 1;
+  if (cnews <= mxText) {
+    dwAText = newsText[cnews];
+    if (dwAText.length != 0) {
+      document.news.news2.value = "";
+      eline = 0;
+      setTimeout("addChar()",tspeed)
+    }
+  }
+}
+function addChar() {
+  if (eline!=1) {
+    if (cchar != dwAText.length) {
+      nmttxt = ""; for (var k=0; k<=cchar;k++) nmttxt += dwAText.charAt(k);
+      document.news.news2.value = nmttxt;
+      cchar += 1;
+      if (cchar != dwAText.length) document.news.news2.value += "_";
+    } else {
+      cchar = 0;
+      eline = 1;
+    }
+    if (mxText==cnews && eline!=0 && ttloop!=0) {
+      cnews = 0; setTimeout("addNews()",tdelay);
+    } else setTimeout("addChar()",tspeed);
+  } else {
+    setTimeout("addNews()",tdelay)
+  }
+}
+
+doNews()
+</script>
+
+</body>
+
+</div>
+</div>
+
+<div id="footer">
+<script language="JavaScript">
+<!-- begin
+var max=0;
+function textlist()
+{
+max=textlist.arguments.length; for (i=0; i<max; i++) this[i]=textlist.arguments[i];
+}
+tl=new textlist
+(
+"(C) Copyright Social Systems LTD 2012"
+);
+var x=0; pos=0;
+var l=tl[0].length;
+function textticker()
+{
+document.tickform.tickfield.value=tl[x].substring(0,pos)+"_";
+if(pos++==l)
+{
+pos=0;
+setTimeout("textticker()",1000);
+x++;
+if(x==max)
+x=0;
+l=tl[x].length;
+} else
+setTimeout("textticker()",50);
+}
+// end -->
+</script>
+<script LANGUAGE="JavaScript">
+<!--
+document.write("<FORM NAME=\"tickform\">");
+document.write("<INPUT TYPE=\"TEXT\" NAME=\"tickfield\" SIZE=\"50\">"); 
+document.write("</FORM>");
+textticker();
+//-->
+</script>
+</div>
+
+</div>
+
+
+</body>
+</html>
